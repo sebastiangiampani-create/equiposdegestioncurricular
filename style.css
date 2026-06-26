@@ -3,810 +3,397 @@
 }
 
 :root {
-  --bg: #eaf2fb;
-  --paper: #ffffff;
-  --ink: #102033;
-  --muted: #53657a;
-
-  --blue-950: #071d33;
-  --blue-900: #0a2540;
-  --blue-800: #12385f;
-  --blue-700: #1f4f7a;
-  --blue-600: #2f6fa3;
-  --blue-100: #e4f0fb;
-  --blue-50: #f5f9fd;
-
-  --border: #cddceb;
-  --shadow: rgba(16, 32, 51, 0.10);
+  --black: #070707;
+  --white: #ffffff;
+  --gray-bg: #dedede;
+  --gray-light: #f7f7f7;
+  --line: #000000;
+  --text: #111111;
+  --muted: #555555;
 }
 
 body {
   margin: 0;
+  min-height: 100vh;
   font-family: "Archivo", system-ui, sans-serif;
-  background: linear-gradient(180deg, #eef4fb 0%, #f7fbff 100%);
-  color: var(--ink);
-}
-
-/* =========================
-   CONTENEDOR GENERAL
-========================= */
-
-.site-wrapper {
-  width: min(1500px, 96vw);
-  height: 100vh;
-  margin: 0 auto;
-  padding: 14px 0;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 12px;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-.hero {
-  text-align: center;
-  padding: 0 18px;
-}
-
-.eyebrow {
-  margin: 0 0 3px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.58rem;
-  font-weight: 800;
-  color: var(--blue-700);
-}
-
-.hero h1 {
-  margin: 0;
-  font-size: clamp(1.9rem, 3.5vw, 3.35rem);
-  line-height: 0.95;
-  letter-spacing: -0.045em;
-  color: var(--blue-900);
-}
-
-.hero-text {
-  max-width: 720px;
-  margin: 7px auto 0;
-  color: var(--muted);
-  font-size: 0.82rem;
-  line-height: 1.32;
-}
-
-.hero-actions {
+  background: #eeeeee;
+  color: var(--text);
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-top: 8px;
 }
 
-.btn {
-  text-decoration: none;
-  border-radius: 999px;
-  padding: 7px 13px;
-  font-size: 0.72rem;
-  font-weight: 800;
-  transition: transform 0.15s ease, opacity 0.15s ease;
+/* CONTENEDOR GENERAL */
+.app-shell {
+  width: min(1180px, 96vw);
+  height: min(670px, 94vh);
+  background: var(--gray-bg);
+  display: grid;
+  grid-template-columns: 32% 68%;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
 }
 
-.btn:hover {
-  transform: translateY(-1px);
-  opacity: 0.92;
+/* SIDEBAR IZQUIERDA */
+.site-sidebar {
+  background: var(--black);
+  color: var(--white);
+  padding: 44px 34px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.btn.primary {
-  background: var(--blue-900);
-  color: white;
+.brand-block {
+  margin-top: 40px;
 }
 
-.btn.secondary {
-  background: var(--paper);
-  color: var(--blue-900);
-  border: 1px solid var(--border);
+.brand-block h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.brand-block p {
+  margin: 8px 0 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.description-box {
+  margin-top: 34px;
+  background: var(--white);
+  color: var(--black);
+  border-radius: 4px;
+  padding: 18px 16px;
+  font-size: 0.76rem;
+  line-height: 1.35;
+  font-weight: 500;
+  max-width: 260px;
 }
 
 .ai-note {
-  max-width: 720px;
-  margin: 8px auto 0;
-  font-size: 0.68rem;
-  color: var(--muted);
+  margin: 28px 0 0;
+  max-width: 260px;
+  font-size: 0.65rem;
+  line-height: 1.35;
+  font-weight: 600;
 }
 
-/* =========================
-   LAYOUT PRINCIPAL
-========================= */
+.download-btn {
+  margin-top: 26px;
+  display: inline-block;
+  background: var(--white);
+  color: var(--black);
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 9px 12px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
 
-.player-section {
-  min-height: 0;
+.download-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.credit {
+  margin: auto 0 0;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+/* ZONA DERECHA */
+.main-area {
+  padding: 34px;
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-rows: auto auto 1fr;
   gap: 14px;
-  align-items: stretch;
+  min-width: 0;
 }
 
-/* =========================
-   COLUMNA IZQUIERDA
-========================= */
+/* FILA SUPERIOR */
+.top-row {
+  display: grid;
+  grid-template-columns: 72% 28%;
+  gap: 16px;
+  min-width: 0;
+}
 
-.chapter-menu {
+/* REPRODUCTOR */
+.player-card {
+  background: var(--black);
+  color: var(--white);
+  border-radius: 8px;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: 18px;
+  align-items: center;
+  min-width: 0;
+}
+
+.cover-box {
+  width: 104px;
+  height: 104px;
+  background: var(--white);
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover-box img {
+  width: 100%;
   height: 100%;
-  min-height: 0;
-  overflow-y: auto;
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 12px;
-  box-shadow: 0 10px 22px var(--shadow);
+  object-fit: cover;
 }
 
-.chapter-menu h2 {
-  margin: 0 0 9px;
-  font-size: 0.88rem;
-  color: var(--blue-900);
+.player-info {
+  min-width: 0;
+}
+
+.chapter-label {
+  margin: 0 0 5px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #d8d8d8;
+}
+
+.player-info h2 {
+  margin: 0 0 10px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+audio {
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  filter: invert(1);
+}
+
+.player-nav {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.player-nav button {
+  width: 30px;
+  height: 26px;
+  border: 1px solid var(--white);
+  background: transparent;
+  color: var(--white);
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.player-nav button:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+/* BOTONERA DERECHA */
+.chapter-menu {
+  background: var(--black);
+  border-radius: 18px;
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .chapter-btn {
-  width: 100%;
-  text-align: left;
-  border: 1px solid var(--border);
-  background: #fff;
-  color: var(--ink);
-  border-radius: 11px;
-  padding: 8px 9px;
-  margin-bottom: 6px;
-  cursor: pointer;
+  border: none;
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--black);
+  padding: 8px 12px;
   font-family: inherit;
+  font-size: 0.68rem;
   font-weight: 700;
-  font-size: 0.70rem;
-  line-height: 1.18;
-  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
 }
 
 .chapter-btn:hover {
   transform: translateY(-1px);
-  border-color: var(--blue-600);
-  background: var(--blue-50);
-}
-
-.chapter-btn span {
-  display: block;
-  margin-bottom: 2px;
-  color: var(--blue-700);
-  font-size: 0.54rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  background: #e6e6e6;
 }
 
 .chapter-btn.active {
-  background: var(--blue-100);
-  border-color: var(--blue-700);
-  color: var(--blue-900);
+  background: #111111;
+  color: var(--white);
+  outline: 1px solid var(--white);
 }
 
-/* =========================
-   COLUMNA DERECHA
-========================= */
-
-.episode-card {
-  height: 100%;
-  min-height: 0;
-  overflow-y: auto;
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 16px;
-  box-shadow: 0 10px 22px var(--shadow);
-
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-areas:
-    "label label"
-    "title title"
-    "audio summary"
-    "nav summary"
-    "ideas ideas";
-  grid-template-rows: auto auto auto auto 1fr;
-  gap: 9px 12px;
-}
-
-.chapter-label {
-  grid-area: label;
-  display: inline-block;
-  width: fit-content;
-  margin: 0;
-  padding: 4px 8px;
-  border-radius: 999px;
-  background: var(--blue-100);
-  color: var(--blue-800);
-  font-size: 0.55rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.episode-card h2 {
-  grid-area: title;
-  margin: 0;
-  font-size: clamp(1.35rem, 2.35vw, 2.2rem);
-  line-height: 1.02;
-  letter-spacing: -0.04em;
-  color: var(--blue-900);
-}
-
-/* =========================
-   AUDIO Y NAVEGACIÓN
-========================= */
-
-audio {
-  grid-area: audio;
-  width: 100%;
-  margin: 0;
-  height: 32px;
-  align-self: start;
-}
-
-.player-nav {
-  grid-area: nav;
-  display: flex;
-  gap: 7px;
-  margin: 0;
-  align-self: start;
-}
-
-.player-nav button {
-  border: none;
-  background: var(--blue-800);
-  color: white;
-  border-radius: 999px;
-  padding: 7px 10px;
-  font-family: inherit;
-  font-size: 0.70rem;
-  font-weight: 800;
-  cursor: pointer;
-  transition: transform 0.15s ease, opacity 0.15s ease;
-}
-
-.player-nav button:hover {
-  transform: translateY(-1px);
-  opacity: 0.92;
-}
-
-/* =========================
-   SÍNTESIS
-========================= */
-
+/* SÍNTESIS */
 .summary-box {
-  grid-area: summary;
-  background: var(--blue-50);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 11px;
-  margin: 0;
-  align-self: stretch;
+  background: var(--gray-light);
+  border: 3px solid var(--line);
+  border-radius: 6px;
+  padding: 22px 28px;
+  min-height: 150px;
+  max-height: 170px;
+  overflow-y: auto;
 }
 
-.summary-box h3,
-.ideas-section h3 {
-  margin: 0 0 6px;
-  font-size: 0.84rem;
-  color: var(--blue-900);
+.summary-box h3 {
+  margin: 0 0 12px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
 }
 
 .summary-box p {
   margin: 0;
-  color: #31475f;
-  line-height: 1.36;
-  font-size: 0.72rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
 }
 
-/* =========================
-   IDEAS CENTRALES
-========================= */
-
+/* IDEAS */
 .ideas-section {
-  grid-area: ideas;
+  background: var(--gray-light);
+  border: 3px solid var(--line);
+  border-radius: 6px;
+  padding: 20px 24px;
   min-height: 0;
+  overflow: hidden;
+}
+
+.ideas-section h3 {
+  margin: 0 0 14px;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
 }
 
 .ideas-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 7px;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 4px;
 }
 
 .idea-card {
-  min-height: 58px;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-left: 4px solid var(--blue-700);
-  border-radius: 11px;
-  padding: 9px 10px;
-  font-size: 0.69rem;
-  font-weight: 650;
-  line-height: 1.25;
-  color: #18324d;
-  display: flex;
-  align-items: flex-start;
-  box-shadow: 0 5px 12px rgba(16, 32, 51, 0.05);
+  background: var(--white);
+  border: 1.8px solid var(--black);
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 0.72rem;
+  line-height: 1.3;
+  font-weight: 600;
 }
 
-/* =========================
-   PANTALLAS MEDIANAS
-========================= */
-
-@media (max-width: 1200px) {
-  .site-wrapper {
-    width: min(1180px, 96vw);
-  }
-
-  .player-section {
-    grid-template-columns: 30% 70%;
-  }
-
-  .episode-card h2 {
-    font-size: clamp(1.3rem, 2.4vw, 2rem);
-  }
-
-  .idea-card {
-    font-size: 0.66rem;
-  }
+/* SCROLL */
+.summary-box::-webkit-scrollbar,
+.ideas-grid::-webkit-scrollbar {
+  width: 8px;
 }
 
-/* =========================
-   TABLET Y CELULAR
-========================= */
+.summary-box::-webkit-scrollbar-thumb,
+.ideas-grid::-webkit-scrollbar-thumb {
+  background: #111111;
+  border-radius: 999px;
+}
 
+/* RESPONSIVE */
 @media (max-width: 900px) {
-  .site-wrapper {
+  body {
+    display: block;
+  }
+
+  .app-shell {
+    width: 100%;
     height: auto;
     min-height: 100vh;
-    display: block;
-    padding: 16px 0 28px;
-  }
-
-  .hero {
-    margin-bottom: 14px;
-  }
-
-  .player-section {
-    display: grid;
     grid-template-columns: 1fr;
-    gap: 12px;
   }
 
-  .chapter-menu,
-  .episode-card {
-    height: auto;
-    overflow: visible;
+  .site-sidebar {
+    padding: 32px 22px;
   }
 
-  .episode-card {
-    display: grid;
+  .brand-block {
+    margin-top: 0;
+  }
+
+  .main-area {
+    padding: 22px;
+  }
+
+  .top-row {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "label"
-      "title"
-      "audio"
-      "nav"
-      "summary"
-      "ideas";
-    grid-template-rows: auto;
+  }
+
+  .chapter-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .chapter-btn {
-    font-size: 0.74rem;
+    min-width: 110px;
   }
 
-  .summary-box p {
-    font-size: 0.78rem;
+  .player-card {
+    grid-template-columns: 90px 1fr;
   }
 
-  .idea-card {
-    font-size: 0.76rem;
-  }
-}
-
-@media (max-width: 620px) {
-  .site-wrapper {
-    width: min(94%, 980px);
+  .cover-box {
+    width: 90px;
+    height: 90px;
   }
 
-  .hero h1 {
-    font-size: 1.9rem;
-  }
-
-  .hero-text {
-    font-size: 0.78rem;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  .episode-card {
-    padding: 14px;
-  }
-
-  .episode-card h2 {
-    font-size: 1.35rem;
-  }
-
-  audio {
-    height: 36px;
-  }
-
-  .player-nav {
-    flex-direction: column;
-  }
-
-  .player-nav button {
-    width: 100%;
+  .summary-box {
+    max-height: none;
   }
 
   .ideas-grid {
     grid-template-columns: 1fr;
+    max-height: none;
   }
 }
-/* =========================================================
-   AJUSTE FINAL: AUDIO + SINTESIS EN LA MISMA LINEA
-========================================================= */
 
-.episode-card {
-  display: grid !important;
-  grid-template-columns: 34% 66% !important;
-  grid-template-areas:
-    "label label"
-    "title title"
-    "media summary"
-    "ideas ideas" !important;
-  grid-template-rows: auto auto auto 1fr !important;
-  gap: 10px 14px !important;
-  padding: 16px !important;
-}
+@media (max-width: 520px) {
+  .player-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
-/* Agrupa audio + botones como bloque izquierdo */
-audio {
-  grid-area: media !important;
-  width: 100% !important;
-  height: 30px !important;
-  margin: 0 !important;
-  align-self: start !important;
-}
-
-.player-nav {
-  grid-area: media !important;
-  display: flex !important;
-  gap: 6px !important;
-  margin-top: 40px !important;
-  align-self: start !important;
-}
-
-.player-nav button {
-  padding: 6px 10px !important;
-  font-size: 0.68rem !important;
-}
-
-/* Síntesis al lado derecho del audio */
-.summary-box {
-  grid-area: summary !important;
-  margin: 0 !important;
-  padding: 12px !important;
-  border-radius: 14px !important;
-  max-height: 190px !important;
-  overflow-y: auto !important;
-}
-
-.summary-box h3 {
-  font-size: 0.84rem !important;
-  margin-bottom: 6px !important;
-}
-
-.summary-box p {
-  font-size: 0.72rem !important;
-  line-height: 1.36 !important;
-}
-
-/* Ideas abajo, más compactas */
-.ideas-section {
-  grid-area: ideas !important;
-  margin-top: 2px !important;
-}
-
-.ideas-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  gap: 7px !important;
-}
-
-.idea-card {
-  min-height: 52px !important;
-  padding: 8px 10px !important;
-  font-size: 0.66rem !important;
-  line-height: 1.23 !important;
-}
-
-/* Más capítulos visibles */
-.chapter-btn {
-  padding: 7px 8px !important;
-  margin-bottom: 5px !important;
-  font-size: 0.68rem !important;
-}
-
-.chapter-btn span {
-  font-size: 0.50rem !important;
-}
-
-/* Título del capítulo más compacto */
-.episode-card h2 {
-  font-size: clamp(1.25rem, 2vw, 1.95rem) !important;
-  margin-bottom: 4px !important;
-}
-
-/* En pantallas chicas vuelve a columna */
-@media (max-width: 900px) {
-  .episode-card {
-    grid-template-columns: 1fr !important;
-    grid-template-areas:
-      "label"
-      "title"
-      "media"
-      "summary"
-      "ideas" !important;
+  .cover-box {
+    margin: 0 auto;
   }
 
   .player-nav {
-    margin-top: 38px !important;
+    justify-content: center;
   }
 
-  .summary-box {
-    max-height: none !important;
-  }
-}
-/* =========================================================
-   ORDEN DEFINITIVO DEL REPRODUCTOR - DEL PCI AL PLAN
-========================================================= */
-
-body {
-  overflow-x: hidden !important;
-}
-
-.site-wrapper {
-  width: min(1500px, 96vw) !important;
-  height: 100vh !important;
-  padding: 10px 0 !important;
-  display: grid !important;
-  grid-template-rows: auto 1fr !important;
-  gap: 10px !important;
-}
-
-/* Header más compacto */
-.hero h1 {
-  font-size: clamp(1.8rem, 3vw, 3rem) !important;
-}
-
-.hero-text {
-  font-size: 0.78rem !important;
-  margin-top: 5px !important;
-}
-
-.hero-actions {
-  margin-top: 7px !important;
-}
-
-.ai-note {
-  font-size: 0.64rem !important;
-  margin-top: 7px !important;
-}
-
-/* Layout principal */
-.player-section {
-  height: 100% !important;
-  min-height: 0 !important;
-  display: grid !important;
-  grid-template-columns: 30% 70% !important;
-  gap: 12px !important;
-}
-
-/* Menú capítulos */
-.chapter-menu {
-  height: 100% !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-  padding: 12px !important;
-  border-radius: 16px !important;
-}
-
-.chapter-menu h2 {
-  font-size: 0.86rem !important;
-  margin-bottom: 8px !important;
-}
-
-.chapter-btn {
-  padding: 7px 9px !important;
-  margin-bottom: 6px !important;
-  border-radius: 10px !important;
-  font-size: 0.67rem !important;
-  line-height: 1.18 !important;
-}
-
-.chapter-btn span {
-  font-size: 0.50rem !important;
-}
-
-/* Card derecha */
-.episode-card {
-  height: 100% !important;
-  min-height: 0 !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-  padding: 14px !important;
-  border-radius: 16px !important;
-
-  display: grid !important;
-  grid-template-rows: auto auto 1fr !important;
-  gap: 10px !important;
-}
-
-/* Header del episodio */
-.episode-header {
-  display: block !important;
-}
-
-.chapter-label {
-  margin: 0 0 5px !important;
-  padding: 4px 8px !important;
-  font-size: 0.52rem !important;
-}
-
-.episode-card h2 {
-  margin: 0 !important;
-  font-size: clamp(1.35rem, 2.2vw, 2.15rem) !important;
-  line-height: 1.02 !important;
-  letter-spacing: -0.04em !important;
-}
-
-/* Zona superior: audio + síntesis */
-.episode-top {
-  display: grid !important;
-  grid-template-columns: 38% 62% !important;
-  gap: 12px !important;
-  align-items: stretch !important;
-  min-height: 150px !important;
-}
-
-.media-panel {
-  background: #f5f9fd !important;
-  border: 1px solid #cddceb !important;
-  border-radius: 14px !important;
-  padding: 12px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  gap: 10px !important;
-  min-width: 0 !important;
-}
-
-audio {
-  width: 100% !important;
-  height: 32px !important;
-  margin: 0 !important;
-}
-
-.player-nav {
-  display: flex !important;
-  gap: 7px !important;
-  margin: 0 !important;
-}
-
-.player-nav button {
-  padding: 6px 10px !important;
-  font-size: 0.68rem !important;
-  border-radius: 999px !important;
-}
-
-/* Síntesis */
-.summary-box {
-  margin: 0 !important;
-  padding: 12px !important;
-  border-radius: 14px !important;
-  max-height: 175px !important;
-  overflow-y: auto !important;
-}
-
-.summary-box h3 {
-  font-size: 0.84rem !important;
-  margin-bottom: 6px !important;
-}
-
-.summary-box p {
-  font-size: 0.70rem !important;
-  line-height: 1.36 !important;
-}
-
-/* Ideas abajo */
-.ideas-section {
-  min-height: 0 !important;
-  overflow: hidden !important;
-}
-
-.ideas-section h3 {
-  font-size: 0.84rem !important;
-  margin: 0 0 7px !important;
-}
-
-.ideas-grid {
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  gap: 7px !important;
-  max-height: 330px !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-  padding-right: 4px !important;
-}
-
-.idea-card {
-  min-height: 54px !important;
-  padding: 8px 10px !important;
-  border-radius: 10px !important;
-  border-left: 4px solid #1f4f7a !important;
-  font-size: 0.66rem !important;
-  line-height: 1.24 !important;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .site-wrapper {
-    height: auto !important;
-    min-height: 100vh !important;
-    display: block !important;
-  }
-
-  .player-section {
-    grid-template-columns: 1fr !important;
-  }
-
-  .episode-card {
-    height: auto !important;
-    overflow: visible !important;
-  }
-
-  .episode-top {
-    grid-template-columns: 1fr !important;
-  }
-
-  .summary-box {
-    max-height: none !important;
-  }
-
-  .ideas-grid {
-    max-height: none !important;
-  }
-}
-
-@media (max-width: 620px) {
-  .hero h1 {
-    font-size: 1.8rem !important;
-  }
-
-  .episode-card h2 {
-    font-size: 1.35rem !important;
-  }
-
-  .player-nav {
-    flex-direction: column !important;
-  }
-
-  .player-nav button {
-    width: 100% !important;
-  }
-
-  .ideas-grid {
-    grid-template-columns: 1fr !important;
+  .brand-block h1 {
+    font-size: 2rem;
   }
 }
