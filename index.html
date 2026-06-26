@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Del PCI al Plan: minisitio con podcast, sintesis e ideas centrales generadas con NotebookLM." />
+  <title>Del PCI al Plan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="site-wrapper">
+    <header class="hero">
+      <p class="eyebrow">Podcast y documento de trabajo</p>
+      <h1>Del PCI al Plan</h1>
+      <p class="hero-text">
+        Un recorrido sonoro y visual para pensar el pasaje del Proyecto Curricular Institucional
+        a las decisiones concretas de ensenanza.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="documentos/del-pci-al-plan.pdf" download>
+          Descargar documento completo
+        </a>
+        <a class="btn secondary" href="documentos/del-pci-al-plan.pdf" target="_blank" rel="noopener">
+          Ver documento
+        </a>
+      </div>
+
+      <p class="ai-note">
+        Los capitulos fueron generados con <strong>NotebookLM</strong> a partir del documento madre
+        <strong>Del PCI al Plan</strong>.
+      </p>
+    </header>
+
+    <section class="player-section" aria-label="Reproductor de capitulos">
+      <aside class="chapter-menu" aria-label="Selector de capitulos">
+        <h2>Capitulos</h2>
+        <div id="chapterButtons" class="chapter-buttons"></div>
+      </aside>
+
+      <section class="episode-card" aria-live="polite">
+        <p class="chapter-label" id="chapterLabel">Capitulo 1</p>
+        <h2 id="episodeTitle">No es un cargo, es una forma de mirar</h2>
+
+        <div class="audio-panel">
+          <audio id="audioPlayer" controls preload="metadata">
+            <source src="audio/capitulo-1.m4a" type="audio/mp4" />
+            Tu navegador no permite reproducir este audio.
+          </audio>
+        </div>
+
+        <div class="player-nav">
+          <button id="prevBtn" type="button" aria-label="Capitulo anterior">Anterior</button>
+          <button id="nextBtn" type="button" aria-label="Capitulo siguiente">Siguiente</button>
+        </div>
+
+        <article class="summary-box">
+          <h3>Sintesis del capitulo</h3>
+          <p id="episodeSummary"></p>
+        </article>
+
+        <article class="ideas-section">
+          <h3>Ideas centrales</h3>
+          <div class="ideas-grid" id="ideasGrid"></div>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
