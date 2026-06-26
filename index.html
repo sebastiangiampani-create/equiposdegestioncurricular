@@ -10,8 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style.css?v=30">
 </head>
+
 <body>
 
   <main class="site-wrapper">
@@ -47,32 +48,32 @@
       <aside class="chapter-menu">
         <h2>Capítulos</h2>
 
-        <button class="chapter-btn active" data-index="0">
+        <button class="chapter-btn active" data-index="0" type="button">
           <span>Capítulo 1</span>
           No es un cargo, es una forma de mirar
         </button>
 
-        <button class="chapter-btn" data-index="1">
+        <button class="chapter-btn" data-index="1" type="button">
           <span>Capítulo 2</span>
           El currículum no vive en los papeles
         </button>
 
-        <button class="chapter-btn" data-index="2">
+        <button class="chapter-btn" data-index="2" type="button">
           <span>Capítulo 3</span>
           No todo es un problema
         </button>
 
-        <button class="chapter-btn" data-index="3">
+        <button class="chapter-btn" data-index="3" type="button">
           <span>Capítulo 4</span>
           Mover el banco, mover la escuela
         </button>
 
-        <button class="chapter-btn" data-index="4">
+        <button class="chapter-btn" data-index="4" type="button">
           <span>Capítulo 5</span>
           Planificar para mirar la enseñanza
         </button>
 
-        <button class="chapter-btn" data-index="5">
+        <button class="chapter-btn" data-index="5" type="button">
           <span>Capítulo 6</span>
           La enseñanza bajo la lupa
         </button>
@@ -80,30 +81,37 @@
 
       <section class="episode-card">
 
-        <p class="chapter-label" id="chapterLabel">Capítulo 1</p>
+        <div class="episode-header">
+          <p class="chapter-label" id="chapterLabel">Capítulo 1</p>
 
-        <h2 id="episodeTitle">
-          No es un cargo, es una forma de mirar
-        </h2>
-
-        <audio id="audioPlayer" controls>
-          <source src="audio/capitulo-1.mp3" type="audio/mpeg">
-          Tu navegador no permite reproducir este audio.
-        </audio>
-
-        <div class="player-nav">
-          <button id="prevBtn" type="button">← Anterior</button>
-          <button id="nextBtn" type="button">Siguiente →</button>
+          <h2 id="episodeTitle">
+            No es un cargo, es una forma de mirar
+          </h2>
         </div>
 
-        <article class="summary-box">
-          <h3>Síntesis del capítulo</h3>
-          <p id="episodeSummary"></p>
-        </article>
+        <div class="episode-top">
+
+          <div class="media-panel">
+            <audio id="audioPlayer" controls preload="metadata">
+              <source src="audio/capitulo-1.mp3" type="audio/mpeg">
+              Tu navegador no permite reproducir este audio.
+            </audio>
+
+            <div class="player-nav">
+              <button id="prevBtn" type="button">← Anterior</button>
+              <button id="nextBtn" type="button">Siguiente →</button>
+            </div>
+          </div>
+
+          <article class="summary-box">
+            <h3>Síntesis del capítulo</h3>
+            <p id="episodeSummary"></p>
+          </article>
+
+        </div>
 
         <article class="ideas-section">
           <h3>Ideas centrales</h3>
-
           <div class="ideas-grid" id="ideasGrid"></div>
         </article>
 
@@ -113,6 +121,7 @@
 
   </main>
 
-  <script src="script.js"></script>
+  <script src="./script.js?v=30"></script>
 </body>
+  Creado por Sebastian Giampani
 </html>
