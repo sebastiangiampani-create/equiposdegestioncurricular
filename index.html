@@ -10,117 +10,118 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./style.css?v=30">
+  <link rel="stylesheet" href="./style.css?v=200">
 </head>
 
 <body>
 
-  <main class="site-wrapper">
+  <main class="app-shell">
 
-    <header class="hero">
-      <p class="eyebrow">Podcast y documento de trabajo</p>
+    <!-- COLUMNA IZQUIERDA -->
+    <aside class="site-sidebar">
 
-      <h1>Del PCI al Plan</h1>
+      <div class="brand-block">
+        <h1>Del PCI al Plan</h1>
+        <p>Podcast y documento de trabajo</p>
+      </div>
 
-      <p class="hero-text">
-        Un recorrido sonoro y visual para pensar el pasaje del Proyecto Curricular Institucional
-        a las decisiones concretas de enseñanza.
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn primary" href="documentos/del-pci-al-plan.pdf" download>
-          Descargar documento completo
-        </a>
-
-        <a class="btn secondary" href="documentos/del-pci-al-plan.pdf" target="_blank">
-          Ver documento
-        </a>
+      <div class="description-box">
+        Un podcast creado con IA, a partir de los materiales de trabajo para pensar el pasaje del Proyecto Curricular Institucional a las decisiones concretas de enseñanza.
       </div>
 
       <p class="ai-note">
-        Los capítulos fueron generados con <strong>NotebookLM</strong> a partir del documento madre
-        <strong>Del PCI al Plan</strong>.
+        Los capítulos fueron generados con <strong>NotebookLM</strong> a partir del documento madre <strong>Del PCI al Plan</strong>.
       </p>
-    </header>
 
-    <section class="player-section">
+      <a class="download-btn" href="documentos/del-pci-al-plan.pdf" download>
+        Descargar documento
+      </a>
 
-      <aside class="chapter-menu">
-        <h2>Capítulos</h2>
+      <p class="credit">
+        Realizado por Sebastian Giampani
+      </p>
 
-        <button class="chapter-btn active" data-index="0" type="button">
-          <span>Capítulo 1</span>
-          No es un cargo, es una forma de mirar
-        </button>
+    </aside>
 
-        <button class="chapter-btn" data-index="1" type="button">
-          <span>Capítulo 2</span>
-          El currículum no vive en los papeles
-        </button>
+    <!-- ZONA DERECHA -->
+    <section class="main-area">
 
-        <button class="chapter-btn" data-index="2" type="button">
-          <span>Capítulo 3</span>
-          No todo es un problema
-        </button>
+      <section class="top-row">
 
-        <button class="chapter-btn" data-index="3" type="button">
-          <span>Capítulo 4</span>
-          Mover el banco, mover la escuela
-        </button>
+        <!-- REPRODUCTOR -->
+        <section class="player-card">
 
-        <button class="chapter-btn" data-index="4" type="button">
-          <span>Capítulo 5</span>
-          Planificar para mirar la enseñanza
-        </button>
+          <div class="cover-box">
+            <img src="img/logo-pci-plan.png" alt="Logo Del PCI al Plan">
+          </div>
 
-        <button class="chapter-btn" data-index="5" type="button">
-          <span>Capítulo 6</span>
-          La enseñanza bajo la lupa
-        </button>
-      </aside>
+          <div class="player-info">
+            <p class="chapter-label" id="chapterLabel">Capítulo 1</p>
 
-      <section class="episode-card">
+            <h2 id="episodeTitle">
+              No es un cargo, es una forma de mirar
+            </h2>
 
-        <div class="episode-header">
-          <p class="chapter-label" id="chapterLabel">Capítulo 1</p>
-
-          <h2 id="episodeTitle">
-            No es un cargo, es una forma de mirar
-          </h2>
-        </div>
-
-        <div class="episode-top">
-
-          <div class="media-panel">
             <audio id="audioPlayer" controls preload="metadata">
               <source src="audio/capitulo-1.mp3" type="audio/mpeg">
               Tu navegador no permite reproducir este audio.
             </audio>
 
             <div class="player-nav">
-              <button id="prevBtn" type="button">← Anterior</button>
-              <button id="nextBtn" type="button">Siguiente →</button>
+              <button id="prevBtn" type="button">‹</button>
+              <button id="nextBtn" type="button">›</button>
             </div>
           </div>
 
-          <article class="summary-box">
-            <h3>Síntesis del capítulo</h3>
-            <p id="episodeSummary"></p>
-          </article>
+        </section>
 
-        </div>
+        <!-- BOTONERA CAPÍTULOS -->
+        <aside class="chapter-menu">
 
-        <article class="ideas-section">
-          <h3>Ideas centrales</h3>
-          <div class="ideas-grid" id="ideasGrid"></div>
-        </article>
+          <button class="chapter-btn active" data-index="0" type="button">
+            Capítulo 1
+          </button>
 
+          <button class="chapter-btn" data-index="1" type="button">
+            Capítulo 2
+          </button>
+
+          <button class="chapter-btn" data-index="2" type="button">
+            Capítulo 3
+          </button>
+
+          <button class="chapter-btn" data-index="3" type="button">
+            Capítulo 4
+          </button>
+
+          <button class="chapter-btn" data-index="4" type="button">
+            Capítulo 5
+          </button>
+
+          <button class="chapter-btn" data-index="5" type="button">
+            Capítulo 6
+          </button>
+
+        </aside>
+
+      </section>
+
+      <!-- SÍNTESIS -->
+      <section class="summary-box">
+        <h3>Síntesis del capítulo</h3>
+        <p id="episodeSummary"></p>
+      </section>
+
+      <!-- IDEAS -->
+      <section class="ideas-section">
+        <h3>Ideas centrales</h3>
+        <div class="ideas-grid" id="ideasGrid"></div>
       </section>
 
     </section>
 
   </main>
 
-  <script src="./script.js?v=30"></script>
+  <script src="./script.js?v=200"></script>
 </body>
 </html>
