@@ -2,7 +2,7 @@ const chapters = [
   {
     label: "Capitulo 1",
     title: "No es un cargo, es una forma de mirar",
-    audio: "audio/capitulo-1.m4a",
+    audio: "audio/capitulo-1.mp3",
     summary: "Este capitulo invita a repensar la gestion curricular no como una jerarquia individual, sino como una funcion colectiva centrada en el liderazgo pedagogico. Propone el ejercicio de revisitar la escuela para desnaturalizar las estructuras tradicionales —la denominada gramatica escolar— que suelen limitar las transformaciones profundas en la ensenanza. A traves de la construccion de una mirada institucional compartida, los equipos directivos y asesores pueden intervenir no desde el saber disciplinar, sino mediante la formulacion de preguntas potentes que habiliten la reflexion sobre la practica docente. Es un material fundamental para quienes buscan priorizar la dimension pedagogica frente a la urgencia administrativa, construyendo acuerdos internos que brinden coherencia y sentido al proyecto educativo de la escuela secundaria.",
     ideas: [
       "La gestion curricular es una funcion colectiva y compartida, no un cargo individual que dependa del saber disciplinar de una sola persona.",
@@ -17,7 +17,7 @@ const chapters = [
   {
     label: "Capitulo 2",
     title: "El curriculum no vive en los papeles",
-    audio: "audio/capitulo-2.m4a",
+    audio: "audio/capitulo-2.mp3",
     summary: "Este capitulo invita a repensar el curriculum mas alla del documento escrito, definiendolo como una experiencia formativa integral que cobra vida en las acciones cotidianas del aula. Explora la tension constitutiva entre la intencion normativa y la realidad pedagogica, posicionando al Proyecto Curricular Institucional (PCI) como una herramienta de decision politica y colectiva. Para los equipos de conduccion y docentes, este texto es clave porque brinda marcos conceptuales —como la transposicion didactica y las logicas de especificacion— para comprender la complejidad de transformar la cultura de la escuela secundaria. Finalmente, analiza los nuevos formatos pedagogicos como una oportunidad estrategica para pasar de la simple yuxtaposicion de materias a una verdadera integracion de saberes que promueva aprendizajes profundos y con sentido para los estudiantes.",
     ideas: [
       "El curriculum no es un documento estatico, sino una experiencia viva que reside en las acciones de las personas y en lo que efectivamente sucede dentro del aula.",
@@ -32,7 +32,7 @@ const chapters = [
   {
     label: "Capitulo 3",
     title: "No todo es un problema",
-    audio: "audio/capitulo-3.m4a",
+    audio: "audio/capitulo-3.mp3",
     summary: "Este capitulo profundiza en el concepto de contexto problematizador como el motor que organiza los laboratorios de aprendizaje significativos. Propone un cambio de mirada radical: dejar atras los temas meramente descriptivos para enfocarse en situaciones complejas que generen preguntas poderosas, aquellas que invitan genuinamente a reflexionar, investigar y debatir. Para los equipos directivos y docentes, este texto es una herramienta esencial, ya que analiza los distintos grados de integracion de saberes —correlacion, concentracion y globalizacion— brindando un marco para el diseno pedagogico colaborativo. Al superar las respuestas rapidas o de Google, se fomenta una comprension profunda y situada de los contenidos escolares. En definitiva, el capitulo ofrece un camino para que las instituciones acompanen la construccion de conocimientos transversales, autenticos y relevantes para la formacion de los estudiantes como ciudadanos del mundo.",
     ideas: [
       "El contexto problematizador no es un tema ni un contenido, sino un recorte de la realidad complejo y relevante que organiza el aprendizaje mediante el debate y la investigacion.",
@@ -46,7 +46,7 @@ const chapters = [
   {
     label: "Capitulo 4",
     title: "Mover el banco, mover la escuela",
-    audio: "audio/capitulo-4.m4a",
+    audio: "audio/capitulo-4.mp3",
     summary: "Este capitulo invita a repensar la escuela secundaria analizando el tripode de hierro y los rasgos estructurales que condicionan el trabajo docente y la ensenanza. A traves de los conceptos de Flavia Terigi, se profundiza en la tension entre las trayectorias teoricas y reales, proponiendo el avance continuo y la organizacion por niveles como una respuesta pedagogica frente a la repitencia. Asimismo, se aborda la electividad y la autonomia estudiantil no como meras opciones, sino como capacidades que la institucion debe ensenar, andamiar y acompanar deliberadamente. Para los equipos directivos y docentes, este texto resulta fundamental para disenar un Proyecto Curricular Institucional (PCI) que priorice los aprendizajes efectivamente logrados por sobre el simple transcurso del tiempo. Es una herramienta clave para transformar el formato escolar tradicional en una propuesta flexible que reconozca y valore la diversidad de recorridos de cada estudiante.",
     ideas: [
       "Las resistencias al cambio son estructurales, no individuales: el tripode de hierro condiciona la tarea docente y hace que la transformacion sea un desafio del sistema.",
@@ -60,7 +60,7 @@ const chapters = [
   {
     label: "Capitulo 5",
     title: "Planificar, para mirar la ensenanza",
-    audio: "audio/capitulo-5.m4a",
+    audio: "audio/capitulo-5.mp3",
     summary: "Este capitulo invita a redescubrir la planificacion como una hipotesis de trabajo y no como un contrato rigido, situandola como el motor de una ensenanza reflexiva y flexible. Propone un modelo organizado en cuatro etapas —punto de partida, indagacion, produccion y evaluacion— bajo la logica del diseno inverso, donde los objetivos de aprendizaje guian cada decision pedagogica. Para los equipos de gestion y asesores, el plan se transforma en una ventana privilegiada para observar lo que sucede en el aula y brindar un asesoramiento situado que trascienda el mero control burocratico. Al analizar la coherencia entre metas, tareas y evaluacion, se recupera informacion valiosa para la toma de decisiones institucionales informadas. Es una herramienta fundamental para que docentes y directivos construyan acuerdos colectivos que fortalezcan la calidad de la ensenanza y el aprendizaje real de los estudiantes.",
     ideas: [
       "La planificacion debe entenderse como una hipotesis de trabajo flexible y no como un contrato rigido, permitiendo ajustar la ensenanza a lo que sucede en el aula.",
@@ -75,7 +75,7 @@ const chapters = [
   {
     label: "Capitulo 6",
     title: "La ensenanza bajo la lupa",
-    audio: "audio/capitulo-6.m4a",
+    audio: "audio/capitulo-6.mp3",
     summary: "Este capitulo invita a los equipos escolares a poner la ensenanza bajo la lupa, analizando la distancia entre los temas disciplinares y los contenidos escolares con propositos pedagogicos claros. Propone el modelo de diseno inverso como una herramienta estrategica para planificar desde los resultados deseados, asegurando que las actividades sean medios coherentes para alcanzar aprendizajes profundos. Para directivos, docentes y asesores, este texto es vital porque brinda marcos para evaluar la demanda cognitiva de las tareas y transformar las consignas en verdaderos trampolines que potencien la autonomia del estudiante. Al integrar estrategias de ensenanza diversas y atender a la heterogeneidad del aula, el capitulo ofrece un camino concreto para pasar de la simple transmision de informacion al desarrollo de capacidades reales, promoviendo una cultura institucional que valore la experimentacion y la reflexion pedagogica.",
     ideas: [
       "El contenido es una decision pedagogica situada, no un simple tema disciplinar; implica elegir que saberes son valiosos y con que propositos se ensenan.",
