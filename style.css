@@ -568,3 +568,245 @@ audio {
     max-height: none !important;
   }
 }
+/* =========================================================
+   ORDEN DEFINITIVO DEL REPRODUCTOR - DEL PCI AL PLAN
+========================================================= */
+
+body {
+  overflow-x: hidden !important;
+}
+
+.site-wrapper {
+  width: min(1500px, 96vw) !important;
+  height: 100vh !important;
+  padding: 10px 0 !important;
+  display: grid !important;
+  grid-template-rows: auto 1fr !important;
+  gap: 10px !important;
+}
+
+/* Header más compacto */
+.hero h1 {
+  font-size: clamp(1.8rem, 3vw, 3rem) !important;
+}
+
+.hero-text {
+  font-size: 0.78rem !important;
+  margin-top: 5px !important;
+}
+
+.hero-actions {
+  margin-top: 7px !important;
+}
+
+.ai-note {
+  font-size: 0.64rem !important;
+  margin-top: 7px !important;
+}
+
+/* Layout principal */
+.player-section {
+  height: 100% !important;
+  min-height: 0 !important;
+  display: grid !important;
+  grid-template-columns: 30% 70% !important;
+  gap: 12px !important;
+}
+
+/* Menú capítulos */
+.chapter-menu {
+  height: 100% !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding: 12px !important;
+  border-radius: 16px !important;
+}
+
+.chapter-menu h2 {
+  font-size: 0.86rem !important;
+  margin-bottom: 8px !important;
+}
+
+.chapter-btn {
+  padding: 7px 9px !important;
+  margin-bottom: 6px !important;
+  border-radius: 10px !important;
+  font-size: 0.67rem !important;
+  line-height: 1.18 !important;
+}
+
+.chapter-btn span {
+  font-size: 0.50rem !important;
+}
+
+/* Card derecha */
+.episode-card {
+  height: 100% !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding: 14px !important;
+  border-radius: 16px !important;
+
+  display: grid !important;
+  grid-template-rows: auto auto 1fr !important;
+  gap: 10px !important;
+}
+
+/* Header del episodio */
+.episode-header {
+  display: block !important;
+}
+
+.chapter-label {
+  margin: 0 0 5px !important;
+  padding: 4px 8px !important;
+  font-size: 0.52rem !important;
+}
+
+.episode-card h2 {
+  margin: 0 !important;
+  font-size: clamp(1.35rem, 2.2vw, 2.15rem) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.04em !important;
+}
+
+/* Zona superior: audio + síntesis */
+.episode-top {
+  display: grid !important;
+  grid-template-columns: 38% 62% !important;
+  gap: 12px !important;
+  align-items: stretch !important;
+  min-height: 150px !important;
+}
+
+.media-panel {
+  background: #f5f9fd !important;
+  border: 1px solid #cddceb !important;
+  border-radius: 14px !important;
+  padding: 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  min-width: 0 !important;
+}
+
+audio {
+  width: 100% !important;
+  height: 32px !important;
+  margin: 0 !important;
+}
+
+.player-nav {
+  display: flex !important;
+  gap: 7px !important;
+  margin: 0 !important;
+}
+
+.player-nav button {
+  padding: 6px 10px !important;
+  font-size: 0.68rem !important;
+  border-radius: 999px !important;
+}
+
+/* Síntesis */
+.summary-box {
+  margin: 0 !important;
+  padding: 12px !important;
+  border-radius: 14px !important;
+  max-height: 175px !important;
+  overflow-y: auto !important;
+}
+
+.summary-box h3 {
+  font-size: 0.84rem !important;
+  margin-bottom: 6px !important;
+}
+
+.summary-box p {
+  font-size: 0.70rem !important;
+  line-height: 1.36 !important;
+}
+
+/* Ideas abajo */
+.ideas-section {
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.ideas-section h3 {
+  font-size: 0.84rem !important;
+  margin: 0 0 7px !important;
+}
+
+.ideas-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 7px !important;
+  max-height: 330px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding-right: 4px !important;
+}
+
+.idea-card {
+  min-height: 54px !important;
+  padding: 8px 10px !important;
+  border-radius: 10px !important;
+  border-left: 4px solid #1f4f7a !important;
+  font-size: 0.66rem !important;
+  line-height: 1.24 !important;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .site-wrapper {
+    height: auto !important;
+    min-height: 100vh !important;
+    display: block !important;
+  }
+
+  .player-section {
+    grid-template-columns: 1fr !important;
+  }
+
+  .episode-card {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .episode-top {
+    grid-template-columns: 1fr !important;
+  }
+
+  .summary-box {
+    max-height: none !important;
+  }
+
+  .ideas-grid {
+    max-height: none !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .episode-card h2 {
+    font-size: 1.35rem !important;
+  }
+
+  .player-nav {
+    flex-direction: column !important;
+  }
+
+  .player-nav button {
+    width: 100% !important;
+  }
+
+  .ideas-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
