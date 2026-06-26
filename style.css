@@ -397,3 +397,92 @@ audio {
     font-size: 2rem;
   }
 }
+/* =====================================================
+   AJUSTE DE LECTURA - SINTESIS E IDEAS MAS COMPACTAS
+===================================================== */
+
+/* La caja de síntesis baja un poco la altura y mejora lectura */
+.summary-box {
+  padding: 14px 22px !important;
+  min-height: 120px !important;
+  max-height: 155px !important;
+  overflow-y: auto !important;
+}
+
+.summary-box h3 {
+  margin: 0 0 8px !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.12em !important;
+}
+
+.summary-box p {
+  font-size: 0.72rem !important;
+  line-height: 1.38 !important;
+  font-weight: 500 !important;
+}
+
+/* La sección de ideas ocupa mejor el espacio */
+.ideas-section {
+  padding: 14px 20px !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.ideas-section h3 {
+  margin: 0 0 10px !important;
+  font-size: 0.76rem !important;
+  letter-spacing: 0.14em !important;
+}
+
+/* Las ideas dejan de ser tarjetas gigantes */
+.ideas-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 7px !important;
+  max-height: 220px !important;
+  overflow-y: auto !important;
+  padding-right: 6px !important;
+}
+
+/* Cards más compactas y legibles */
+.idea-card {
+  min-height: auto !important;
+  padding: 8px 10px !important;
+  border: 1.5px solid #000 !important;
+  border-radius: 4px !important;
+  background: #fff !important;
+  font-size: 0.66rem !important;
+  line-height: 1.25 !important;
+  font-weight: 600 !important;
+}
+
+/* Ajuste del contenedor general para que respire mejor */
+.main-area {
+  padding: 28px 30px !important;
+  gap: 10px !important;
+  grid-template-rows: auto auto 1fr !important;
+}
+
+/* Achica un poco la fila de arriba para ganar espacio abajo */
+.player-card {
+  padding: 14px !important;
+}
+
+.cover-box {
+  width: 86px !important;
+  height: 86px !important;
+}
+
+.player-card {
+  grid-template-columns: 86px 1fr !important;
+}
+
+.chapter-menu {
+  padding: 14px 12px !important;
+  gap: 8px !important;
+}
+
+.chapter-btn {
+  padding: 7px 10px !important;
+  font-size: 0.64rem !important;
+}
