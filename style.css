@@ -11,7 +11,6 @@
   --muted: #a5adba;
   --soft: #d9dee8;
   --accent: #1ed760;
-  --accent-dark: #159d47;
   --line: rgba(255, 255, 255, 0.1);
   --shadow: 0 26px 70px rgba(0, 0, 0, 0.34);
 }
@@ -32,7 +31,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(14px, 2vw, 28px);
+  padding: 28px;
   overflow: hidden;
 }
 
@@ -47,27 +46,26 @@ button {
 }
 
 .app-shell {
-  width: min(1540px, calc(100vw - 48px));
-  height: min(900px, calc(100vh - 48px));
-  max-height: 900px;
-  background: rgba(16, 19, 27, 0.88);
+  width: min(1740px, calc(100vw - 56px));
+  height: min(980px, calc(100vh - 56px));
+  background: rgba(16, 19, 27, 0.9);
   border: 1px solid var(--line);
-  border-radius: 32px;
+  border-radius: 34px;
   box-shadow: var(--shadow);
   overflow: hidden;
   display: grid;
-  grid-template-columns: minmax(330px, 34%) minmax(0, 66%);
+  grid-template-columns: minmax(320px, 29%) minmax(0, 71%);
   backdrop-filter: blur(18px);
 }
 
 .hero-panel {
   position: relative;
   min-height: 0;
-  padding: clamp(26px, 3vw, 46px) clamp(24px, 2.5vw, 38px) clamp(22px, 2vw, 30px);
+  padding: clamp(30px, 3vw, 50px) clamp(24px, 2.4vw, 38px) clamp(24px, 2vw, 32px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: clamp(16px, 2.2vh, 28px);
+  gap: 22px;
   background:
     linear-gradient(180deg, rgba(30, 215, 96, 0.2), transparent 38%),
     #090b10;
@@ -93,7 +91,7 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 999px;
   color: var(--soft);
-  font-size: clamp(0.62rem, 0.7vw, 0.72rem);
+  font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -101,31 +99,31 @@ button {
 
 .brand-block h1 {
   margin: 0;
-  font-size: clamp(3rem, 5vw, 5.2rem);
+  font-size: clamp(3rem, 4.8vw, 5.4rem);
   line-height: 0.88;
   letter-spacing: -0.08em;
 }
 
 .brand-block p {
   max-width: 360px;
-  margin: 18px 0 0;
+  margin: 20px 0 0;
   color: var(--muted);
-  font-size: clamp(0.84rem, 1vw, 1rem);
-  line-height: 1.4;
+  font-size: clamp(0.9rem, 0.95vw, 1.02rem);
+  line-height: 1.42;
   font-weight: 600;
 }
 
 .description-box {
   position: relative;
   z-index: 1;
-  max-width: 370px;
-  padding: clamp(14px, 1.4vw, 18px);
+  max-width: 380px;
+  padding: 18px;
   border: 1px solid var(--line);
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.06);
   color: var(--soft);
-  font-size: clamp(0.78rem, 0.9vw, 0.88rem);
-  line-height: 1.42;
+  font-size: 0.88rem;
+  line-height: 1.45;
   font-weight: 500;
 }
 
@@ -136,8 +134,8 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 42px;
-  padding: 0 18px;
+  min-height: 44px;
+  padding: 0 20px;
   border-radius: 999px;
   background: var(--text);
   color: #0b0d12;
@@ -168,10 +166,10 @@ button {
 .content-panel {
   min-width: 0;
   min-height: 0;
-  padding: clamp(18px, 2.2vw, 30px);
+  padding: clamp(24px, 2.2vw, 34px);
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr) auto;
-  gap: clamp(12px, 1.8vh, 18px);
+  grid-template-rows: auto minmax(420px, 1fr) minmax(150px, auto);
+  gap: 20px;
 }
 
 .player-card,
@@ -179,16 +177,17 @@ button {
 .summary-box {
   min-width: 0;
   border: 1px solid var(--line);
-  border-radius: 28px;
+  border-radius: 30px;
   background: rgba(255, 255, 255, 0.055);
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.2);
 }
 
 .player-card {
-  padding: clamp(16px, 1.8vw, 22px);
+  min-height: 230px;
+  padding: 24px;
   display: grid;
-  grid-template-columns: clamp(132px, 12vw, 178px) minmax(0, 1fr);
-  gap: clamp(18px, 2vw, 24px);
+  grid-template-columns: clamp(165px, 11vw, 205px) minmax(0, 1fr);
+  gap: 28px;
   align-items: center;
   background:
     linear-gradient(135deg, rgba(30, 215, 96, 0.24), rgba(255, 255, 255, 0.05) 42%),
@@ -198,7 +197,7 @@ button {
 .cover-box {
   width: 100%;
   aspect-ratio: 1;
-  border-radius: 24px;
+  border-radius: 26px;
   overflow: hidden;
   background: #ffffff;
   box-shadow: 0 22px 36px rgba(0, 0, 0, 0.34);
@@ -219,25 +218,25 @@ button {
 .now-playing {
   margin: 0;
   color: var(--accent);
-  font-size: clamp(0.62rem, 0.78vw, 0.72rem);
+  font-size: 0.74rem;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .player-info h2 {
-  margin: 8px 0 12px;
+  margin: 10px 0 14px;
   color: var(--text);
-  font-size: clamp(1.25rem, 2.45vw, 2.35rem);
-  line-height: 1;
+  font-size: clamp(1.65rem, 2.45vw, 2.6rem);
+  line-height: 0.98;
   letter-spacing: -0.045em;
   font-weight: 900;
 }
 
 .now-playing {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.7rem;
 }
 
 audio {
@@ -248,16 +247,16 @@ audio {
   display: grid;
   grid-template-columns: 42px 1fr 42px;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 800;
 }
 
 .progress-bar {
   width: 100%;
   appearance: none;
-  height: 5px;
+  height: 6px;
   border-radius: 999px;
   background: linear-gradient(to right, var(--accent) 0%, var(--accent) var(--progress, 0%), rgba(255, 255, 255, 0.22) var(--progress, 0%), rgba(255, 255, 255, 0.22) 100%);
   cursor: pointer;
@@ -266,16 +265,16 @@ audio {
 
 .progress-bar::-webkit-slider-thumb {
   appearance: none;
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background: var(--text);
   box-shadow: 0 0 0 4px rgba(30, 215, 96, 0.18);
 }
 
 .progress-bar::-moz-range-thumb {
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
   border: none;
   border-radius: 50%;
   background: var(--text);
@@ -283,10 +282,10 @@ audio {
 }
 
 .player-controls {
-  margin-top: 18px;
+  margin-top: 22px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
 .control-btn,
@@ -300,22 +299,22 @@ audio {
 }
 
 .control-btn {
-  width: 42px;
-  height: 42px;
+  width: 46px;
+  height: 46px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.1);
   color: var(--text);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 900;
 }
 
 .play-btn {
-  width: 58px;
-  height: 58px;
+  width: 64px;
+  height: 64px;
   border-radius: 999px;
   background: var(--accent);
   color: #061008;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 900;
   box-shadow: 0 14px 28px rgba(30, 215, 96, 0.22);
 }
@@ -335,7 +334,7 @@ audio {
 
 .playlist-section {
   min-height: 0;
-  padding: clamp(14px, 1.6vw, 20px);
+  padding: 24px;
   background: rgba(21, 25, 34, 0.78);
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
@@ -346,13 +345,13 @@ audio {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
 
 .section-title-row h3 {
   margin: 0;
   color: var(--text);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -360,7 +359,7 @@ audio {
 
 .section-title-row span {
   color: var(--muted);
-  font-size: 0.74rem;
+  font-size: 0.8rem;
   font-weight: 800;
 }
 
@@ -368,21 +367,22 @@ audio {
   min-height: 0;
   display: grid;
   align-content: start;
-  gap: 8px;
+  gap: 12px;
   overflow-y: auto;
-  padding-right: 4px;
+  padding-right: 6px;
 }
 
 .chapter-btn {
   width: 100%;
+  min-height: 74px;
   border: 0;
-  border-radius: 18px;
-  background: transparent;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.035);
   color: var(--text);
-  padding: clamp(9px, 1.1vw, 12px);
+  padding: 16px 18px;
   display: grid;
-  grid-template-columns: 38px minmax(0, 1fr);
-  gap: 10px;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 16px;
   align-items: center;
   text-align: left;
   cursor: pointer;
@@ -390,8 +390,8 @@ audio {
 }
 
 .chapter-btn:hover {
-  background: rgba(255, 255, 255, 0.07);
-  transform: translateX(2px);
+  background: rgba(255, 255, 255, 0.075);
+  transform: translateX(3px);
 }
 
 .chapter-btn.active {
@@ -404,14 +404,14 @@ audio {
 
 .track-number {
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 1rem;
   font-weight: 900;
 }
 
 .track-copy {
   min-width: 0;
   display: grid;
-  gap: 3px;
+  gap: 5px;
 }
 
 .track-copy strong {
@@ -419,7 +419,7 @@ audio {
   overflow: hidden;
   text-overflow: ellipsis;
   color: var(--text);
-  font-size: clamp(0.8rem, 0.95vw, 0.92rem);
+  font-size: clamp(1rem, 1.1vw, 1.18rem);
   font-weight: 900;
 }
 
@@ -428,14 +428,14 @@ audio {
   overflow: hidden;
   text-overflow: ellipsis;
   color: var(--muted);
-  font-size: clamp(0.68rem, 0.8vw, 0.76rem);
+  font-size: clamp(0.78rem, 0.86vw, 0.92rem);
   font-weight: 600;
 }
 
 .summary-box {
-  min-height: 148px;
+  min-height: 150px;
   max-height: 190px;
-  padding: clamp(14px, 1.6vw, 20px);
+  padding: 22px 24px;
   background: rgba(21, 25, 34, 0.82);
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
@@ -446,7 +446,7 @@ audio {
   margin: 0;
   overflow-y: auto;
   color: var(--soft);
-  font-size: clamp(0.78rem, 0.94vw, 0.92rem);
+  font-size: 0.92rem;
   line-height: 1.5;
   font-weight: 500;
   padding-right: 6px;
@@ -463,62 +463,64 @@ audio {
   border-radius: 999px;
 }
 
-@media (min-width: 1500px) and (min-height: 900px) {
-  .app-shell {
-    width: min(1600px, calc(100vw - 72px));
-    height: min(920px, calc(100vh - 72px));
-  }
-}
-
-@media (max-height: 760px) and (min-width: 941px) {
-  .app-shell {
-    height: calc(100vh - 28px);
-    width: min(1320px, calc(100vw - 28px));
-    border-radius: 24px;
+@media (max-height: 860px) and (min-width: 941px) {
+  body {
+    padding: 18px;
   }
 
-  .hero-panel {
-    padding: 22px 24px;
+  .app-shell {
+    width: min(1640px, calc(100vw - 36px));
+    height: calc(100vh - 36px);
+    border-radius: 26px;
+  }
+
+  .content-panel {
+    padding: 20px;
+    grid-template-rows: auto minmax(360px, 1fr) minmax(128px, auto);
     gap: 14px;
   }
 
+  .hero-panel {
+    padding: 24px;
+  }
+
   .brand-block h1 {
-    font-size: clamp(2.6rem, 4vw, 4rem);
+    font-size: clamp(2.7rem, 4vw, 4.3rem);
   }
 
   .brand-block p,
   .description-box {
-    font-size: 0.76rem;
+    font-size: 0.78rem;
     line-height: 1.35;
   }
 
-  .content-panel {
-    padding: 16px;
-    gap: 12px;
-  }
-
   .player-card {
-    grid-template-columns: 118px minmax(0, 1fr);
-    padding: 14px;
+    min-height: 190px;
+    grid-template-columns: 132px minmax(0, 1fr);
+    padding: 16px;
   }
 
   .player-info h2 {
-    font-size: clamp(1.1rem, 2vw, 1.7rem);
+    font-size: clamp(1.25rem, 2vw, 1.85rem);
   }
 
-  .play-btn {
-    width: 50px;
-    height: 50px;
+  .playlist-section {
+    padding: 18px;
   }
 
-  .control-btn {
-    width: 38px;
-    height: 38px;
+  .chapter-btn {
+    min-height: 62px;
+    padding: 12px 16px;
   }
 
   .summary-box {
-    min-height: 118px;
+    min-height: 124px;
     max-height: 150px;
+    padding: 16px 18px;
+  }
+
+  .summary-box p {
+    font-size: 0.8rem;
   }
 }
 
@@ -533,7 +535,6 @@ audio {
     width: 100%;
     height: auto;
     min-height: 100vh;
-    max-height: none;
     border-radius: 0;
     grid-template-columns: 1fr;
   }
@@ -589,7 +590,14 @@ audio {
   }
 
   .chapter-btn {
-    grid-template-columns: 34px minmax(0, 1fr);
+    min-height: 70px;
+    grid-template-columns: 42px minmax(0, 1fr);
+    padding: 14px;
+  }
+
+  .track-copy strong,
+  .track-copy small {
+    white-space: normal;
   }
 
   .summary-box p {
