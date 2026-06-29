@@ -31,7 +31,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 28px;
+  padding: 24px;
   overflow: hidden;
 }
 
@@ -46,8 +46,8 @@ button {
 }
 
 .app-shell {
-  width: min(1740px, calc(100vw - 56px));
-  height: min(980px, calc(100vh - 56px));
+  width: min(1740px, calc(100vw - 48px));
+  height: min(980px, calc(100vh - 48px));
   background: rgba(16, 19, 27, 0.9);
   border: 1px solid var(--line);
   border-radius: 34px;
@@ -166,10 +166,10 @@ button {
 .content-panel {
   min-width: 0;
   min-height: 0;
-  padding: clamp(24px, 2.2vw, 34px);
+  padding: clamp(20px, 2vw, 32px);
   display: grid;
-  grid-template-rows: auto minmax(420px, 1fr) minmax(150px, auto);
-  gap: 20px;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: clamp(14px, 2vh, 20px);
 }
 
 .player-card,
@@ -183,11 +183,11 @@ button {
 }
 
 .player-card {
-  min-height: 230px;
-  padding: 24px;
+  min-height: 220px;
+  padding: clamp(18px, 1.8vw, 24px);
   display: grid;
-  grid-template-columns: clamp(165px, 11vw, 205px) minmax(0, 1fr);
-  gap: 28px;
+  grid-template-columns: clamp(145px, 10vw, 195px) minmax(0, 1fr);
+  gap: clamp(20px, 2vw, 28px);
   align-items: center;
   background:
     linear-gradient(135deg, rgba(30, 215, 96, 0.24), rgba(255, 255, 255, 0.05) 42%),
@@ -227,7 +227,7 @@ button {
 .player-info h2 {
   margin: 10px 0 14px;
   color: var(--text);
-  font-size: clamp(1.65rem, 2.45vw, 2.6rem);
+  font-size: clamp(1.55rem, 2.35vw, 2.55rem);
   line-height: 0.98;
   letter-spacing: -0.045em;
   font-weight: 900;
@@ -332,9 +332,16 @@ audio {
   background: #2bf571;
 }
 
+.bottom-layout {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(520px, 62%) minmax(320px, 38%);
+  gap: clamp(14px, 1.5vw, 20px);
+}
+
 .playlist-section {
   min-height: 0;
-  padding: 24px;
+  padding: clamp(18px, 1.6vw, 24px);
   background: rgba(21, 25, 34, 0.78);
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
@@ -367,22 +374,22 @@ audio {
   min-height: 0;
   display: grid;
   align-content: start;
-  gap: 12px;
+  gap: 10px;
   overflow-y: auto;
   padding-right: 6px;
 }
 
 .chapter-btn {
   width: 100%;
-  min-height: 74px;
+  min-height: 64px;
   border: 0;
-  border-radius: 22px;
+  border-radius: 20px;
   background: rgba(255, 255, 255, 0.035);
   color: var(--text);
-  padding: 16px 18px;
+  padding: 13px 16px;
   display: grid;
-  grid-template-columns: 54px minmax(0, 1fr);
-  gap: 16px;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 14px;
   align-items: center;
   text-align: left;
   cursor: pointer;
@@ -404,14 +411,14 @@ audio {
 
 .track-number {
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 0.96rem;
   font-weight: 900;
 }
 
 .track-copy {
   min-width: 0;
   display: grid;
-  gap: 5px;
+  gap: 4px;
 }
 
 .track-copy strong {
@@ -419,7 +426,7 @@ audio {
   overflow: hidden;
   text-overflow: ellipsis;
   color: var(--text);
-  font-size: clamp(1rem, 1.1vw, 1.18rem);
+  font-size: clamp(0.92rem, 0.95vw, 1.08rem);
   font-weight: 900;
 }
 
@@ -428,14 +435,13 @@ audio {
   overflow: hidden;
   text-overflow: ellipsis;
   color: var(--muted);
-  font-size: clamp(0.78rem, 0.86vw, 0.92rem);
+  font-size: clamp(0.74rem, 0.78vw, 0.88rem);
   font-weight: 600;
 }
 
 .summary-box {
-  min-height: 150px;
-  max-height: 190px;
-  padding: 22px 24px;
+  min-height: 0;
+  padding: clamp(18px, 1.6vw, 24px);
   background: rgba(21, 25, 34, 0.82);
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
@@ -446,8 +452,8 @@ audio {
   margin: 0;
   overflow-y: auto;
   color: var(--soft);
-  font-size: 0.92rem;
-  line-height: 1.5;
+  font-size: clamp(0.82rem, 0.88vw, 0.95rem);
+  line-height: 1.52;
   font-weight: 500;
   padding-right: 6px;
 }
@@ -463,25 +469,25 @@ audio {
   border-radius: 999px;
 }
 
-@media (max-height: 860px) and (min-width: 941px) {
+@media (max-height: 760px) and (min-width: 941px) {
   body {
-    padding: 18px;
+    padding: 16px;
   }
 
   .app-shell {
-    width: min(1640px, calc(100vw - 36px));
-    height: calc(100vh - 36px);
+    width: min(1640px, calc(100vw - 32px));
+    height: calc(100vh - 32px);
     border-radius: 26px;
   }
 
   .content-panel {
-    padding: 20px;
-    grid-template-rows: auto minmax(360px, 1fr) minmax(128px, auto);
-    gap: 14px;
+    padding: 16px;
+    gap: 12px;
   }
 
   .hero-panel {
-    padding: 24px;
+    padding: 22px 24px;
+    gap: 14px;
   }
 
   .brand-block h1 {
@@ -490,37 +496,77 @@ audio {
 
   .brand-block p,
   .description-box {
-    font-size: 0.78rem;
-    line-height: 1.35;
+    font-size: 0.76rem;
+    line-height: 1.32;
+  }
+
+  .download-btn {
+    min-height: 38px;
+    font-size: 0.68rem;
   }
 
   .player-card {
-    min-height: 190px;
-    grid-template-columns: 132px minmax(0, 1fr);
-    padding: 16px;
+    min-height: 174px;
+    grid-template-columns: 118px minmax(0, 1fr);
+    padding: 14px;
   }
 
   .player-info h2 {
-    font-size: clamp(1.25rem, 2vw, 1.85rem);
+    font-size: clamp(1.2rem, 2vw, 1.75rem);
+    margin-bottom: 10px;
   }
 
-  .playlist-section {
-    padding: 18px;
+  .now-playing {
+    margin-bottom: 10px;
+  }
+
+  .play-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .control-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .player-controls {
+    margin-top: 12px;
+  }
+
+  .playlist-section,
+  .summary-box {
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .section-title-row {
+    margin-bottom: 10px;
+  }
+
+  .chapter-menu {
+    gap: 7px;
   }
 
   .chapter-btn {
-    min-height: 62px;
-    padding: 12px 16px;
+    min-height: 50px;
+    padding: 8px 12px;
+    border-radius: 16px;
   }
 
-  .summary-box {
-    min-height: 124px;
-    max-height: 150px;
-    padding: 16px 18px;
+  .track-copy strong {
+    font-size: 0.82rem;
   }
 
+  .track-copy small,
   .summary-box p {
-    font-size: 0.8rem;
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .bottom-layout {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -551,7 +597,11 @@ audio {
 
   .content-panel {
     padding: 22px;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  .bottom-layout {
+    grid-template-columns: 1fr;
   }
 
   .playlist-section {
@@ -564,8 +614,7 @@ audio {
   }
 
   .summary-box {
-    min-height: auto;
-    max-height: none;
+    min-height: 260px;
   }
 }
 
