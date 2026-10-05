@@ -3,16 +3,21 @@
 }
 
 :root {
-  --bg: #0f1115;
-  --panel: #151922;
-  --panel-soft: #1e2430;
-  --panel-lift: #252c38;
-  --text: #f5f7fb;
-  --muted: #a5adba;
-  --soft: #d9dee8;
-  --accent: #1ed760;
-  --line: rgba(255, 255, 255, 0.1);
-  --shadow: 0 26px 70px rgba(0, 0, 0, 0.34);
+  --ink: #12395c;
+  --muted: #5f7382;
+  --band: #edf3f8;
+  --line: #d8e1e8;
+  --mint: #83ded3;
+  --mint-dark: #126e65;
+  --mint-soft: #e7f8f5;
+  --gold-soft: #fff4d8;
+  --danger: #a93048;
+  --danger-soft: #ffe9ee;
+  --ok: #156746;
+  --ok-soft: #e6f6ee;
+  --white: #ffffff;
+  --shadow: 0 14px 34px rgba(18, 57, 92, 0.08);
+  --shadow-lg: 0 24px 60px rgba(18, 57, 92, 0.12);
 }
 
 html {
@@ -23,11 +28,11 @@ body {
   margin: 0;
   width: 100%;
   min-height: 100vh;
-  font-family: "Archivo", system-ui, sans-serif;
+  font-family: "Archivo", Arial, sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(30, 215, 96, 0.16), transparent 34%),
-    linear-gradient(135deg, #08090d 0%, #121620 52%, #0b0d12 100%);
-  color: var(--text);
+    radial-gradient(circle at top left, rgba(131, 222, 211, 0.16), transparent 32%),
+    linear-gradient(180deg, #ffffff 0%, #f7fafc 100%);
+  color: var(--ink);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,14 +53,13 @@ button {
 .app-shell {
   width: min(1740px, calc(100vw - 48px));
   height: min(980px, calc(100vh - 48px));
-  background: rgba(16, 19, 27, 0.9);
+  background: #ffffff;
   border: 1px solid var(--line);
-  border-radius: 34px;
-  box-shadow: var(--shadow);
+  border-radius: 28px;
+  box-shadow: var(--shadow-lg);
   overflow: hidden;
   display: grid;
   grid-template-columns: minmax(320px, 29%) minmax(0, 71%);
-  backdrop-filter: blur(18px);
 }
 
 .hero-panel {
@@ -67,8 +71,8 @@ button {
   justify-content: space-between;
   gap: 22px;
   background:
-    linear-gradient(180deg, rgba(30, 215, 96, 0.2), transparent 38%),
-    #090b10;
+    linear-gradient(180deg, rgba(131, 222, 211, 0.22), transparent 38%),
+    var(--band);
   border-right: 1px solid var(--line);
   overflow: hidden;
 }
@@ -80,28 +84,38 @@ button {
   width: 320px;
   height: 320px;
   border-radius: 999px;
-  background: rgba(30, 215, 96, 0.13);
-  filter: blur(6px);
+  background: rgba(131, 222, 211, 0.22);
+  filter: blur(8px);
   pointer-events: none;
 }
 
 .brand-pill {
+  position: relative;
+  z-index: 1;
   width: fit-content;
   padding: 8px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid #bce8e2;
   border-radius: 999px;
-  color: var(--soft);
+  background: var(--mint-soft);
+  color: var(--mint-dark);
   font-size: 0.72rem;
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
+.brand-block {
+  position: relative;
+  z-index: 1;
+}
+
 .brand-block h1 {
   margin: 0;
+  color: var(--ink);
   font-size: clamp(3rem, 4.8vw, 5.4rem);
   line-height: 0.88;
-  letter-spacing: -0.08em;
+  letter-spacing: -0.07em;
+  font-weight: 900;
 }
 
 .brand-block p {
@@ -116,15 +130,16 @@ button {
 .description-box {
   position: relative;
   z-index: 1;
-  max-width: 380px;
+  max-width: 390px;
   padding: 18px;
   border: 1px solid var(--line);
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--soft);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--ink);
   font-size: 0.88rem;
-  line-height: 1.45;
+  line-height: 1.48;
   font-weight: 500;
+  box-shadow: 0 8px 22px rgba(18, 57, 92, 0.045);
 }
 
 .download-btn {
@@ -136,27 +151,29 @@ button {
   justify-content: center;
   min-height: 44px;
   padding: 0 20px;
+  border: 1px solid var(--ink);
   border-radius: 999px;
-  background: var(--text);
-  color: #0b0d12;
+  background: var(--ink);
+  color: #ffffff;
   text-decoration: none;
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  transition: transform 0.18s ease, background 0.18s ease;
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
 }
 
 .download-btn:hover {
   transform: translateY(-2px);
-  background: var(--accent);
+  background: var(--mint-dark);
+  border-color: var(--mint-dark);
 }
 
 .credit {
   position: relative;
   z-index: 1;
   margin: 0;
-  color: rgba(255, 255, 255, 0.48);
+  color: var(--muted);
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -170,6 +187,7 @@ button {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
   gap: clamp(14px, 2vh, 20px);
+  background: #ffffff;
 }
 
 .player-card,
@@ -177,9 +195,9 @@ button {
 .summary-box {
   min-width: 0;
   border: 1px solid var(--line);
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.055);
-  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.2);
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
 }
 
 .player-card {
@@ -190,17 +208,18 @@ button {
   gap: clamp(20px, 2vw, 28px);
   align-items: center;
   background:
-    linear-gradient(135deg, rgba(30, 215, 96, 0.24), rgba(255, 255, 255, 0.05) 42%),
-    var(--panel);
+    linear-gradient(135deg, rgba(131, 222, 211, 0.24), rgba(237, 243, 248, 0.34) 42%),
+    #ffffff;
 }
 
 .cover-box {
   width: 100%;
   aspect-ratio: 1;
-  border-radius: 26px;
+  border-radius: 22px;
   overflow: hidden;
   background: #ffffff;
-  box-shadow: 0 22px 36px rgba(0, 0, 0, 0.34);
+  border: 1px solid var(--line);
+  box-shadow: 0 16px 30px rgba(18, 57, 92, 0.12);
 }
 
 .cover-box img {
@@ -217,7 +236,7 @@ button {
 .chapter-label,
 .now-playing {
   margin: 0;
-  color: var(--accent);
+  color: var(--mint-dark);
   font-size: 0.74rem;
   font-weight: 900;
   letter-spacing: 0.12em;
@@ -226,7 +245,7 @@ button {
 
 .player-info h2 {
   margin: 10px 0 14px;
-  color: var(--text);
+  color: var(--ink);
   font-size: clamp(1.55rem, 2.35vw, 2.55rem);
   line-height: 0.98;
   letter-spacing: -0.045em;
@@ -258,7 +277,13 @@ audio {
   appearance: none;
   height: 6px;
   border-radius: 999px;
-  background: linear-gradient(to right, var(--accent) 0%, var(--accent) var(--progress, 0%), rgba(255, 255, 255, 0.22) var(--progress, 0%), rgba(255, 255, 255, 0.22) 100%);
+  background: linear-gradient(
+    to right,
+    var(--mint-dark) 0%,
+    var(--mint-dark) var(--progress, 0%),
+    var(--line) var(--progress, 0%),
+    var(--line) 100%
+  );
   cursor: pointer;
   outline: none;
 }
@@ -268,8 +293,8 @@ audio {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: var(--text);
-  box-shadow: 0 0 0 4px rgba(30, 215, 96, 0.18);
+  background: var(--ink);
+  box-shadow: 0 0 0 4px rgba(131, 222, 211, 0.32);
 }
 
 .progress-bar::-moz-range-thumb {
@@ -277,8 +302,8 @@ audio {
   height: 15px;
   border: none;
   border-radius: 50%;
-  background: var(--text);
-  box-shadow: 0 0 0 4px rgba(30, 215, 96, 0.18);
+  background: var(--ink);
+  box-shadow: 0 0 0 4px rgba(131, 222, 211, 0.32);
 }
 
 .player-controls {
@@ -295,15 +320,16 @@ audio {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.16s ease, background 0.16s ease, color 0.16s ease;
+  transition: transform 0.16s ease, background 0.16s ease, color 0.16s ease, box-shadow 0.16s ease;
 }
 
 .control-btn {
   width: 46px;
   height: 46px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text);
+  border: 1px solid var(--line);
+  background: #ffffff;
+  color: var(--ink);
   font-size: 1.6rem;
   font-weight: 900;
 }
@@ -312,11 +338,11 @@ audio {
   width: 64px;
   height: 64px;
   border-radius: 999px;
-  background: var(--accent);
-  color: #061008;
+  background: var(--ink);
+  color: #ffffff;
   font-size: 1.25rem;
   font-weight: 900;
-  box-shadow: 0 14px 28px rgba(30, 215, 96, 0.22);
+  box-shadow: 0 14px 28px rgba(18, 57, 92, 0.18);
 }
 
 .control-btn:hover,
@@ -325,11 +351,12 @@ audio {
 }
 
 .control-btn:hover {
-  background: rgba(255, 255, 255, 0.18);
+  background: var(--mint-soft);
+  border-color: #bce8e2;
 }
 
 .play-btn:hover {
-  background: #2bf571;
+  background: var(--mint-dark);
 }
 
 .bottom-layout {
@@ -342,7 +369,7 @@ audio {
 .playlist-section {
   min-height: 0;
   padding: clamp(18px, 1.6vw, 24px);
-  background: rgba(21, 25, 34, 0.78);
+  background: #ffffff;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
 }
@@ -357,7 +384,7 @@ audio {
 
 .section-title-row h3 {
   margin: 0;
-  color: var(--text);
+  color: var(--ink);
   font-size: 1rem;
   font-weight: 900;
   letter-spacing: 0.1em;
@@ -382,10 +409,10 @@ audio {
 .chapter-btn {
   width: 100%;
   min-height: 64px;
-  border: 0;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.035);
-  color: var(--text);
+  border: 1px solid transparent;
+  border-radius: 18px;
+  background: #f8fafb;
+  color: var(--ink);
   padding: 13px 16px;
   display: grid;
   grid-template-columns: 48px minmax(0, 1fr);
@@ -393,20 +420,22 @@ audio {
   align-items: center;
   text-align: left;
   cursor: pointer;
-  transition: background 0.16s ease, transform 0.16s ease;
+  transition: background 0.16s ease, transform 0.16s ease, border-color 0.16s ease;
 }
 
 .chapter-btn:hover {
-  background: rgba(255, 255, 255, 0.075);
+  background: var(--band);
+  border-color: var(--line);
   transform: translateX(3px);
 }
 
 .chapter-btn.active {
-  background: var(--panel-lift);
+  background: var(--mint-soft);
+  border-color: #bce8e2;
 }
 
 .chapter-btn.active .track-number {
-  color: var(--accent);
+  color: var(--mint-dark);
 }
 
 .track-number {
@@ -425,7 +454,7 @@ audio {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: var(--text);
+  color: var(--ink);
   font-size: clamp(0.92rem, 0.95vw, 1.08rem);
   font-weight: 900;
 }
@@ -442,7 +471,7 @@ audio {
 .summary-box {
   min-height: 0;
   padding: clamp(18px, 1.6vw, 24px);
-  background: rgba(21, 25, 34, 0.82);
+  background: var(--band);
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
 }
@@ -451,9 +480,9 @@ audio {
   min-height: 0;
   margin: 0;
   overflow-y: auto;
-  color: var(--soft);
+  color: var(--ink);
   font-size: clamp(0.82rem, 0.88vw, 0.95rem);
-  line-height: 1.52;
+  line-height: 1.55;
   font-weight: 500;
   padding-right: 6px;
 }
@@ -465,7 +494,7 @@ audio {
 
 .chapter-menu::-webkit-scrollbar-thumb,
 .summary-box p::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.24);
+  background: #b7c5d0;
   border-radius: 999px;
 }
 
@@ -477,7 +506,7 @@ audio {
   .app-shell {
     width: min(1640px, calc(100vw - 32px));
     height: calc(100vh - 32px);
-    border-radius: 26px;
+    border-radius: 24px;
   }
 
   .content-panel {
@@ -537,7 +566,7 @@ audio {
   .playlist-section,
   .summary-box {
     padding: 14px;
-    border-radius: 24px;
+    border-radius: 20px;
   }
 
   .section-title-row {
@@ -551,7 +580,7 @@ audio {
   .chapter-btn {
     min-height: 50px;
     padding: 8px 12px;
-    border-radius: 16px;
+    border-radius: 14px;
   }
 
   .track-copy strong {
@@ -575,13 +604,16 @@ audio {
     display: block;
     padding: 0;
     overflow: auto;
+    background: #ffffff;
   }
 
   .app-shell {
     width: 100%;
     height: auto;
     min-height: 100vh;
+    border: 0;
     border-radius: 0;
+    box-shadow: none;
     grid-template-columns: 1fr;
   }
 
