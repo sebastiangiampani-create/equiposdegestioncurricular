@@ -33,11 +33,7 @@ body {
     radial-gradient(circle at top left, rgba(131, 222, 211, 0.16), transparent 32%),
     linear-gradient(180deg, #ffffff 0%, #f7fafc 100%);
   color: var(--ink);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 button,
@@ -50,9 +46,105 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Identidad institucional · misma lógica visual que PCI Secundaria Aprende */
+.institutional-top {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 68px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 0 24px;
+}
+
+.institutional-brand {
+  display: flex;
+  align-items: center;
+  min-width: 250px;
+}
+
+.institutional-brand img {
+  display: block;
+  width: min(285px, 52vw);
+  height: 48px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.institutional-top-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.institutional-module {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.institutional-ba {
+  display: block;
+  height: 32px;
+  width: auto;
+}
+
+.institutional-footer {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  flex-wrap: wrap;
+  padding: 42px 4.5vw;
+  background: #0d3550;
+  color: #ffffff;
+}
+
+.institutional-footer .footer-school {
+  display: block;
+  width: min(145px, 42vw);
+  height: auto;
+}
+
+.institutional-footer .footer-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: auto;
+}
+
+.institutional-footer .footer-right strong {
+  font-size: 1.05rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.institutional-footer .footer-sep {
+  width: 2px;
+  height: 38px;
+  background: #ffffff;
+  opacity: 0.9;
+}
+
+.institutional-footer .footer-ba {
+  display: block;
+  height: 48px;
+  width: auto;
+}
+
 .app-shell {
   width: min(1740px, calc(100vw - 48px));
-  height: min(980px, calc(100vh - 48px));
+  height: min(900px, calc(100vh - 116px));
+  margin: 24px auto;
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 28px;
@@ -499,13 +591,10 @@ audio {
 }
 
 @media (max-height: 760px) and (min-width: 941px) {
-  body {
-    padding: 16px;
-  }
-
   .app-shell {
     width: min(1640px, calc(100vw - 32px));
-    height: calc(100vh - 32px);
+    height: calc(100vh - 100px);
+    margin: 16px auto;
     border-radius: 24px;
   }
 
@@ -610,7 +699,8 @@ audio {
   .app-shell {
     width: 100%;
     height: auto;
-    min-height: 100vh;
+    min-height: 0;
+    margin: 0;
     border: 0;
     border-radius: 0;
     box-shadow: none;
@@ -647,6 +737,57 @@ audio {
 
   .summary-box {
     min-height: 260px;
+  }
+}
+
+@media (max-width: 700px) {
+  .institutional-top {
+    height: 62px;
+    padding: 0 14px;
+    gap: 10px;
+  }
+
+  .institutional-brand {
+    min-width: 0;
+  }
+
+  .institutional-brand img {
+    width: min(230px, 58vw);
+    height: 42px;
+  }
+
+  .institutional-module {
+    display: none;
+  }
+
+  .institutional-ba {
+    height: 28px;
+  }
+
+  .institutional-footer {
+    padding: 30px 22px;
+    gap: 14px;
+  }
+
+  .institutional-footer .footer-school {
+    width: min(130px, 42vw);
+  }
+
+  .institutional-footer .footer-right {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .institutional-footer .footer-right strong {
+    font-size: 0.9rem;
+  }
+
+  .institutional-footer .footer-sep {
+    height: 32px;
+  }
+
+  .institutional-footer .footer-ba {
+    height: 42px;
   }
 }
 
